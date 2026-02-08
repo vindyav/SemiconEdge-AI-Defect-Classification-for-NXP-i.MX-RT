@@ -1,0 +1,21 @@
+Model: MobileNetV3-Small
+Framework: TensorFlow / PyTorch
+Export Format: ONNX (Opset 13)
+
+Input Shape:
+- 1 x 128 x 128 x 1 (Grayscale)
+
+Output:
+- 1 x 8 (Softmax)
+
+Total Parameters: ~1.5M
+Model Size: ~2.1 MB
+
+Edge Optimization:
+- Depthwise Separable Convolutions
+- Global Average Pooling
+- Fully Connected Softmax Head
+
+Target Platform:
+- NXP i.MX RT1060 / RT1170
+- ARM Cortex-M
