@@ -1,0 +1,26 @@
+Deployment Preparation – NXP eIQ (Phase 3)
+
+Model Format: ONNX
+Opset Version: 13
+
+Core Layers Used:
+- Conv2D
+- DepthwiseConv2D
+- BatchNorm
+- ReLU / Hardswish
+- GlobalAveragePooling
+- FullyConnected
+- Softmax
+
+Quantization Plan:
+- INT8 Post-Training Quantization
+- Per-channel weights
+- Per-tensor activations
+
+Target Hardware:
+- NXP i.MX RT1060
+- NXP i.MX RT1170
+
+Inference Backend:
+- eIQ Neutron Provider
+- GLOW Compiler
